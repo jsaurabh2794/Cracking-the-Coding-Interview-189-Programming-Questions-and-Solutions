@@ -29,14 +29,15 @@ public class Sum_Lists {
 		linkedList2 = LinkedList.insert(linkedList2, 2);
 		
 		LinkedList linkedList3 = new LinkedList();
-		linkedList3 = LinkedList.insert(linkedList3, 6);
 		linkedList3 = LinkedList.insert(linkedList3, 1);
-		linkedList3 = LinkedList.insert(linkedList3, 7);
+		linkedList3 = LinkedList.insert(linkedList3, 2);
+		linkedList3 = LinkedList.insert(linkedList3, 3);
+		linkedList3 = LinkedList.insert(linkedList3, 4);
 
 		LinkedList linkedList4 = new LinkedList();
-		linkedList4 = LinkedList.insert(linkedList4, 2);
-		linkedList4 = LinkedList.insert(linkedList4, 9);
 		linkedList4 = LinkedList.insert(linkedList4, 5);
+		linkedList4 = LinkedList.insert(linkedList4, 6);
+		linkedList4 = LinkedList.insert(linkedList4, 7);
 		
 
 		Display.LinkedListdisplay(sumList(linkedList1, linkedList2)); // Using Reverse
