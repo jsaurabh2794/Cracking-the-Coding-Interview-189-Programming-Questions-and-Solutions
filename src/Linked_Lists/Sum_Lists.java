@@ -17,7 +17,7 @@ public class Sum_Lists {
 		 * 1-> 7) + (2 -> 9 -> 5). That is,617 + 295. Output: 9 -> 1 -> 2. That is, 912.
 		 */
 
-		// Input of linkedList
+		// Input of linkedList---
 		LinkedList linkedList1 = new LinkedList();
 		linkedList1 = LinkedList.insert(linkedList1, 7);
 		linkedList1 = LinkedList.insert(linkedList1, 1);
