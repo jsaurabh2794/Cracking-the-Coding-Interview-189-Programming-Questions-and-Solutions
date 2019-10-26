@@ -5,10 +5,6 @@ import java.util.NoSuchElementException;
 public class MyQueue<T> {
 
 	private static class QueueNode<T> {
-<<<<<<< HEAD
-		
-=======
->>>>>>> branch 'master' of https://github.com/jsaurabh2794/Cracking-the-Coding-Interview-189-Programming-Questions-and-Solutions.git
 		public T data;
 		public QueueNode<T> next;
 
