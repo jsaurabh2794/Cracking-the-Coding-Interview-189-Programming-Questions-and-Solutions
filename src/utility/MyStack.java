@@ -15,7 +15,7 @@ public class MyStack<T> {
 	}
 	
 	public StackNode<T> top;
-	
+	public int size;
 	public T pop() {
 		if(top == null)
 		{
@@ -23,6 +23,7 @@ public class MyStack<T> {
 		}
 		T data = top.data;
 		top = top.next;
+		size--;
 		return data;
 	}
 	
@@ -31,6 +32,7 @@ public class MyStack<T> {
 		StackNode<T> node = new StackNode<T>(data);
 		node.next = top;
 		top = node;
+		size++;
 	}
 	
 	public T peek()
@@ -44,5 +46,9 @@ public class MyStack<T> {
 	public boolean isEmpty()
 	{
 		return top == null;
+	}
+	public int sizeOfStack()
+	{
+		return this.size;
 	}
 }
