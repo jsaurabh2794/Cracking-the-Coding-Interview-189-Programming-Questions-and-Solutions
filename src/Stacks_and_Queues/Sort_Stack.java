@@ -10,6 +10,7 @@ public class Sort_Stack {
 		MyStack<Integer> stackNeedToBeSorted = new MyStack<Integer>();
 		stackNeedToBeSorted.push(5);
 		stackNeedToBeSorted.push(4);
+		stackNeedToBeSorted.push(4);
 		stackNeedToBeSorted.push(6);
 		stackNeedToBeSorted.push(8);
 		stackNeedToBeSorted.push(7);
