@@ -48,6 +48,10 @@ public class Validate_BST {
 
 		// Using Inorder Traversal---give sorted elements
 		System.out.println("Tree is BST:" + validateBSTUsingInorder(root));
+		
+		// Using BST property---give sorted elements
+		System.out.println("Tree is BST:" + validateBSTUsingBSTProperty(root,Integer.MIN_VALUE,Integer.MAX_VALUE));
+			
 	}
 
 	private static boolean validateBSTUsingInorder(TreeNode root) {
@@ -57,7 +61,7 @@ public class Validate_BST {
 	private static boolean validateBST(TreeNode root) {
 		// TODO Auto-generated method stub
 		if (root == null) {
-			return false;
+			return true;
 		}
 		validateBST(root.getLeft());
 		// System.out.print(root.getData()+" ");
@@ -71,5 +75,24 @@ public class Validate_BST {
 		validateBST(root.getRight());
 		return true;
 	}
-
+  private static boolean validateBSTUsingBSTProperty(TreeNode node, Integer min, Integer max)
+  {
+	  if(node == null)
+	  {
+		  return true;
+	  }
+	  if((min !=null && node.getData() <= min) || (max!=null && node.getData() > max))
+	  {
+	  return false;
+	  }
+	  if(!validateBSTUsingBSTProperty(node.getLeft(), min, node.getData()))
+	  {
+	   return false;
+	  }
+	  if(!validateBSTUsingBSTProperty(node.getRight(), node.getData(), max))
+	  {
+	   return false;
+	  }
+	  return true;
+  }
 }
