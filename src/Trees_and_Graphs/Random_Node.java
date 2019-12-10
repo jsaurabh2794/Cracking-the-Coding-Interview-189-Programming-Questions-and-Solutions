@@ -17,25 +17,14 @@ public class Random_Node {
 		 *      
 		 *      
 		 */
-		
-	    TreeNode child2 = new TreeNode(12);
-
-		TreeNode child3 = new TreeNode(15);
-
-		TreeNode child0 = new TreeNode(14);
-		child0.setLeft(child2);
-		child0.setRight(child3);
-
-		TreeNode child4 = new TreeNode(18);
-		TreeNode child5 = new TreeNode(21);
-
-		TreeNode child1 = new TreeNode(20);
-		child1.setLeft(child4);
-		child1.setRight(child5);
 
 		TreeNode root = new TreeNode(16);
-		root.setLeft(child0);
-		root.setRight(child1);
+		root.insertInOrder(14);
+		root.insertInOrder(20);
+		root.insertInOrder(12);
+		root.insertInOrder(15);
+		root.insertInOrder(18);
+		root.insertInOrder(21);
 		
 		System.out.println(root.getRandomNode().data());
 	}
@@ -107,7 +96,7 @@ class TreeNode {
 		}
 	}
 
-	public void insertInOrder(int d) {
+	public void insertInOrder(int d) { // Create BST
 		if (d <= data) {
 			if (left == null) {
 				left = new TreeNode(d);
