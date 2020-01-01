@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Permutations_without_Dups {
 
 	public static void main(String[] args) {
-		System.out.println(getPermutation("Sakshi"));
+		System.out.println(getPermutation("Saa"));
 	}
 
 	private static ArrayList<String> getPermutation(String word) {
@@ -21,7 +21,10 @@ public class Permutations_without_Dups {
 		for (String w : words) {
 			for (int i = 0; i <=w.length(); i++) {
 				String s = insertCharAt(w, firstChar, i);
-				permutations.add(s);
+				if(!permutations.contains(s))
+				{
+				permutations.add(s); //handles the duplicate
+				}
 			}
 		}
 		return permutations;
