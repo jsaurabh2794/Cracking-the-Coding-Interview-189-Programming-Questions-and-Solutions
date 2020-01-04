@@ -24,7 +24,8 @@ public class Triple_Step {
 		}else if(memory[n] > -1) {
 			return memory[n];
 		}else {
-			return noOfCountWays(n-1, memory)+noOfCountWays(n-2, memory)+noOfCountWays(n-3, memory);
+			memory[n] = noOfCountWays(n-1, memory)+noOfCountWays(n-2, memory)+noOfCountWays(n-3, memory);
+			return memory[n];
 		}
 		
 	}
